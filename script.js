@@ -451,7 +451,7 @@ function showDossierScreen(){
     <div class="dossier">
 
         <img
-            src="${currentCase.suspectImage}"
+            src="student_danai.png"
             alt="Suspect"
             onerror="this.src='https://via.placeholder.com/280x350?text=SUSPECT'"
         >
