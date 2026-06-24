@@ -589,7 +589,7 @@ function triggerHackedEvent(){
 
 ตรวจพบการบุกรุกจากภายนอก
 
-ID11 - DANAI
+ID11 - ${currentCase.suspectName}
 
 กำลังทำการ FORCE OVERRIDE
 
