@@ -1,4 +1,28 @@
 // ===============================
+// CASE DATA
+// ===============================
+
+let currentCase = null;
+
+const CASES = {
+
+    1:{
+        caseName:"แฟ้มคดี A-01",
+        suspectName:"ดนีย"
+    },
+
+    2:{
+        caseName:"แฟ้มคดี A-02",
+        suspectName:"แดเนียล"
+    },
+
+    3:{
+        caseName:"แฟ้มคดี A-03",
+        suspectName:"องศา"
+    }
+
+};
+// ===============================
 // SCHOOL SERVER MYSTERY
 // MAIN GAME SCRIPT
 // ===============================
@@ -18,7 +42,7 @@ const SUSPECT_CODE = "11";
 // เริ่มเกม
 // ===============================
 
-createLockScreen();
+showCaseSelection();
 
 // ===============================
 // หน้าปลดล็อกระบบ
@@ -733,5 +757,77 @@ function showFinalScreen(){
     </div>
 
     `;
+
+}
+// ===============================
+// CASE SELECTION
+// ===============================
+
+function showCaseSelection(){
+
+    screen.innerHTML = `
+
+    <h1>
+        🕵️ SCHOOL SERVER MYSTERY
+    </h1>
+
+    <h2>
+        เลือกแฟ้มคดี
+    </h2>
+
+    <div class="case-grid">
+
+        <div class="case-card">
+
+            <h3>📁 แฟ้มคดี A-01</h3>
+
+            <p>
+                คดีลับภายในโรงเรียน
+            </p>
+
+            <button onclick="startCase(1)">
+                เปิดแฟ้ม
+            </button>
+
+        </div>
+
+        <div class="case-card">
+
+            <h3>📁 แฟ้มคดี A-02</h3>
+
+            <p>
+                คดีลับภายในโรงเรียน
+            </p>
+
+            <button onclick="startCase(2)">
+                เปิดแฟ้ม
+            </button>
+
+        </div>
+
+        <div class="case-card">
+
+            <h3>📁 แฟ้มคดี A-03</h3>
+
+            <p>
+                คดีลับภายในโรงเรียน
+            </p>
+
+            <button onclick="startCase(3)">
+                เปิดแฟ้ม
+            </button>
+
+        </div>
+
+    </div>
+
+    `;
+
+}
+function startCase(caseId){
+
+    currentCase = CASES[caseId];
+
+    createLockScreen();
 
 }
