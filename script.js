@@ -495,10 +495,10 @@ function showDossierScreen(){
 
             มีความแค้นกับ อารยา
             ประธานนักเรียน
-
+            <br>
             เนื่องจากถูกจับได้ว่า
             แฮกแก้เกรด
-
+            <br>
             ${currentCase.suspectName}จึงพยายามโยนความผิด
             ให้บุคคลอื่น
 
@@ -635,7 +635,7 @@ function triggerMatrixCrash(){
 
 "CONNECTING FROM SUITE_ROOM_COMPUTER_11... CONNECTED.",
 
-"WIPING EVIDENCE: TARGET_DANAI_RECORD_ID11...",
+"WIPING EVIDENCE: TARGET_${currentCase.suspectName}_RECORD_ID11...",
 
 "100% DELETED!",
 
