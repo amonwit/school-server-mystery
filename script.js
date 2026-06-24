@@ -513,7 +513,7 @@ function startCountdown(){
 
         triggerHackedEvent();
 
-    },20000);
+    },15000);
 
 }
 // ===============================
