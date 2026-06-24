@@ -8,17 +8,20 @@ const CASES = {
 
     1:{
         caseName:"แฟ้มคดี A-01",
-        suspectName:"ดนีย"
+        suspectName:"ดนัย",
+        suspectImage:"student_danai.png"
     },
 
     2:{
         caseName:"แฟ้มคดี A-02",
-        suspectName:"แดเนียล"
+        suspectName:"แดเนียล",
+        suspectImage:"student_danai.png"
     },
 
     3:{
         caseName:"แฟ้มคดี A-03",
-        suspectName:"องศา"
+        suspectName:"องศา",
+        suspectImage:"student_danai.png"
     }
 
 };
@@ -448,72 +451,55 @@ function showDossierScreen(){
     <div class="dossier">
 
         <img
-            src="student_danai.png"
-            alt="Danai"
-            onerror="this.src='https://via.placeholder.com/280x350?text=STUDENT+PHOTO'"
+            src="${currentCase.suspectImage}"
+            alt="Suspect"
+            onerror="this.src='https://via.placeholder.com/280x350?text=SUSPECT'"
         >
 
         <div class="dossier-info">
 
             <h3>
-                นายดนัย
+                ผู้ต้องสงสัยหลัก
             </h3>
 
-            <p>
-                ชมรมคอมพิวเตอร์ / แฮกเกอร์
-            </p>
-
-            <hr>
+            <hr><br>
 
             <p>
-                <strong>
-                รหัสคีย์การ์ด:
-                </strong>
-                11
+                ชื่อ : ${currentCase.suspectName}
             </p>
 
             <p>
-                <strong>
-                เครื่องดื่มแก้วโปรด:
-                </strong>
-                โคล่า
+                รหัสคีย์การ์ด : 11
             </p>
 
             <p>
-                <strong>
-                เบอร์รองเท้าจริง:
-                </strong>
-                40
-            </p>
-
-            <hr>
-
-            <p>
-
-            มีความแค้นกับ อารยา
-            ประธานนักเรียน
-
-            เนื่องจากถูกจับได้ว่า
-            แฮกแก้เกรด
-
-            ดนัยจึงพยายามโยนความผิด
-            ให้บุคคลอื่น
-
+                สถานะ : อยู่ระหว่างการสืบสวน
             </p>
 
             <p>
+                ระดับความน่าสงสัย : สูง
+            </p>
 
-            หลักฐานสำคัญคือ
+            <br>
 
-            Server Log
+            <p>
 
-            ที่บันทึกการใช้คีย์การ์ด
+            ตรวจพบการเข้าใช้งาน
+            ระบบภายในโรงเรียน
 
-            หมายเลข 11
+            หลายครั้งในวันเกิดเหตุ
 
-            บริเวณโรงยิม
+            และพบรหัสคีย์การ์ด
+            ตรงกับหลักฐานใน Server Log
 
-            เวลา 15:03 น.
+            </p>
+
+            <br>
+
+            <p>
+
+            ⚠️ กรุณาตรวจสอบข้อมูล
+            อย่างรอบคอบ
 
             </p>
 
@@ -526,6 +512,7 @@ function showDossierScreen(){
     startCountdown();
 
 }
+
 
 // ===============================
 // TIMER
