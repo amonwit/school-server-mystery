@@ -1,0 +1,287 @@
+/* =========================
+   SCHOOL SERVER MYSTERY
+   CYBER HACKER THEME
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0a0a0a;
+    color:#00ff66;
+    font-family:"Courier New", monospace;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* เอฟเฟกต์จอสแกน */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+
+    background:
+    repeating-linear-gradient(
+        transparent,
+        transparent 2px,
+        rgba(0,255,0,0.03) 3px
+    );
+
+    z-index:999;
+}
+
+/* พื้นหลัง */
+#app{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+/* กล่องหลัก */
+#screen{
+    width:100%;
+    max-width:1100px;
+
+    background:#111;
+    border:2px solid #00ff66;
+
+    padding:25px;
+
+    box-shadow:
+        0 0 15px #00ff66,
+        inset 0 0 10px #00ff66;
+
+    border-radius:10px;
+}
+
+/* หัวข้อ */
+h1,h2,h3{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+h1{
+    color:#00ff66;
+    text-shadow:0 0 10px #00ff66;
+}
+
+h2{
+    color:#ff4444;
+    text-shadow:0 0 10px red;
+}
+
+/* กล่องแสดงผล */
+.display{
+    width:100%;
+    max-width:400px;
+
+    margin:20px auto;
+
+    text-align:center;
+
+    padding:15px;
+
+    background:#000;
+
+    border:2px solid #00ff66;
+
+    font-size:32px;
+    font-weight:bold;
+
+    letter-spacing:4px;
+
+    box-shadow:0 0 10px #00ff66;
+}
+
+/* กล่อง LOG */
+.log{
+    background:black;
+
+    color:#00ff66;
+
+    padding:20px;
+
+    border:1px solid #00ff66;
+
+    margin-top:15px;
+    margin-bottom:15px;
+
+    white-space:pre-wrap;
+
+    overflow:auto;
+
+    max-height:400px;
+
+    box-shadow:0 0 10px #00ff66;
+}
+
+/* ปุ่ม */
+button{
+
+    background:#222;
+
+    color:#00ff66;
+
+    border:1px solid #00ff66;
+
+    padding:15px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    border-radius:5px;
+}
+
+button:hover{
+
+    background:#00ff66;
+    color:black;
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 10px #00ff66;
+}
+
+/* แป้นตัวเลข */
+.keypad{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:10px;
+
+    max-width:400px;
+
+    margin:20px auto;
+}
+
+/* ปุ่ม Enter */
+.enter-btn{
+    background:#00ff66;
+    color:black;
+    font-weight:bold;
+}
+
+/* ปุ่ม Clear */
+.clear-btn{
+    background:#ff3333;
+    color:white;
+}
+
+/* คำใบ้ */
+.hint-box{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    background:#1a1a1a;
+
+    border-left:5px solid #00ff66;
+}
+
+/* ผู้ต้องสงสัย */
+.dossier{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    justify-content:center;
+
+    align-items:flex-start;
+}
+
+.dossier img{
+
+    width:280px;
+
+    border:3px solid #ff3333;
+
+    box-shadow:0 0 15px red;
+}
+
+.dossier-info{
+
+    flex:1;
+    min-width:300px;
+
+    background:#1a1a1a;
+
+    padding:20px;
+
+    border:1px solid #444;
+
+    line-height:1.8;
+}
+
+/* ตัวจับเวลา */
+.timer{
+
+    font-size:26px;
+
+    color:#ff4444;
+
+    text-align:center;
+
+    margin-top:20px;
+
+    animation:blink .8s infinite;
+}
+
+@keyframes blink{
+
+    50%{
+        opacity:.2;
+    }
+}
+
+/* Matrix */
+.matrix{
+
+    color:#00ff66;
+
+    background:black;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    white-space:pre-wrap;
+}
+
+/* มือถือ */
+@media(max-width:768px){
+
+    .display{
+        font-size:24px;
+    }
+
+    button{
+        font-size:16px;
+        padding:12px;
+    }
+
+    .dossier img{
+        width:220px;
+    }
+}
