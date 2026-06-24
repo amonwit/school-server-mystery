@@ -9,19 +9,19 @@ const CASES = {
     1:{
         caseName:"แฟ้มคดี A-01",
         suspectName:"ดนัย",
-        suspectImage:"student_danai.png"
+        suspectEng:"Danai"
     },
 
     2:{
         caseName:"แฟ้มคดี A-02",
         suspectName:"แดเนียล",
-        suspectImage:"student_danai.png"
+        suspectEng:"Danial"
     },
 
     3:{
         caseName:"แฟ้มคดี A-03",
         suspectName:"องศา",
-        suspectImage:"student_danai.png"
+        suspectEng:"Ongsa"
     }
 
 };
@@ -589,7 +589,7 @@ function triggerHackedEvent(){
 
 ตรวจพบการบุกรุกจากภายนอก
 
-ID11 - ${currentCase.suspectName}
+ID11 - ${currentCase.suspectEng}
 
 กำลังทำการ FORCE OVERRIDE
 
@@ -635,7 +635,7 @@ function triggerMatrixCrash(){
 
 "CONNECTING FROM SUITE_ROOM_COMPUTER_11... CONNECTED.",
 
-"WIPING EVIDENCE: TARGET_${currentCase.suspectName}_RECORD_ID11...",
+`WIPING EVIDENCE: TARGET_${currentCase.suspectEng.toUpperCase()}_RECORD ID11...`,
 
 "100% DELETED!",
 
@@ -651,7 +651,7 @@ function triggerMatrixCrash(){
 
 "ALL DIGITAL EVIDENCE DESTROYED.",
 
-"SERVER TERMINATED BY DANAI."
+"`SERVER TERMINATED BY ${currentCase.suspectEng.toUpperCase()}.`"
 
     ];
 
